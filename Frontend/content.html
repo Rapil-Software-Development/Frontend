@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="shortcut icon" href="img/morpheus.png" type="image/png">
+        <link rel="stylesheet" href="css/null.css">
+        <link rel="stylesheet" href="css/content.css"/>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+        <title>Content</title>
+        <!--[if lt IE 9]>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div class="fullscreen-bg">
+            <video loop="" muted="" autoplay="" poster="img/Neon_Moment.jpg" class="fullscreen-bg__video">
+                <source src="img/Neon.mp4" type="video/mp4">
+                <source src="img/Neon.webm" type="video/webm">
+            </video>
+        </div>
+        <div class="form-container">
+            <form>
+              <label for="verse-choose">Choose a verse</label>
+              <select id="verse-choose" name="verse-choose">
+                <option>Verse 1</option>
+                <option>Verse 2</option>
+                <option>Verse 3</option>
+                <option>Verse 4</option>
+              </select>
+            </form>
+            <h2>The Conqueror Worm, <em>Edgar Allen Poe, 1843</em></h2>
+            <pre>
+
+            </pre>
+        </div>
+
+        <script>
+
+          const verseChoose = document.querySelector('select');
+          const poemDisplay = document.querySelector('pre');
+
+          verseChoose.onchange = function() {
+            const verse = verseChoose.value;
+            updateDisplay(verse);
+          };
+
+          function updateDisplay(verse) {
+            verse = verse.replace(" ", "");
+            verse = verse.toLowerCase();
+            let url = verse + '.txt';
+
+            let request = new XMLHttpRequest();
+            request.open('GET', url);
+            request.responseType = 'text';
+
+            request.onload = function() {
+              poemDisplay.textContent = request.response;
+            };
+
+            request.send();
+          };
+
+          updateDisplay('Verse 1');
+          verseChoose.value = 'Verse 1';
+
+        </script>
+    </body>
+</html>
