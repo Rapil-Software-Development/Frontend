@@ -5,7 +5,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 $key=1;
 if ($key==1) {
-    $filename="index.html";
+    $filename="content.html";
 }
 $data=file_get_contents($filename);
 echo $data;
