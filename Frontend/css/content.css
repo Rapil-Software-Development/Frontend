@@ -64,3 +64,20 @@ select {
     background-color: #022365;
     color:white;
 }
+.mqtt {
+    position: absolute;
+    top: 40px;
+    left: 95px;
+    right: 0;
+    bottom: 0;
+}
+button {
+    color: white;
+    background-color: #4054BF;
+    border-radius: 20px;
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    font-family: 'AndroidInsomnia';
+
+}
