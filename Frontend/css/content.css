@@ -43,6 +43,19 @@
     color: white;
     font-size: 15px;
 }
+.input-form-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 650px;
+    bottom: 550px;
+    margin: auto;
+    width: 460px;
+    height: 80px;
+    font-family: 'neuropolxfree';
+    color: white;
+    font-size: 15px;
+}
 pre {
     font-family: 'AndroidInsomnia';
     color: white;
@@ -64,20 +77,37 @@ select {
     background-color: #022365;
     color:white;
 }
-.mqtt {
+.form {
     position: absolute;
-    top: 40px;
-    left: 95px;
-    right: 0;
-    bottom: 0;
+    top:50px;
 }
-button {
-    color: white;
-    background-color: #4054BF;
-    border-radius: 20px;
-    width: 150px;
-    height: 50px;
-    font-size: 16px;
-    font-family: 'AndroidInsomnia';
+.x_handler {
+    width: 360px;
+    margin-bottom: 5px;
+    color: blue;
+}
+.y_handler {
+    width: 360px;
+}
+.colortext {
+    background-color: #26021E;
+    color:white;
+}
+.sub_button {
+    display:inline-block;
+    position: absolute;
+    width: 90px;
+    height: 25px;
+    margin-left: 370px;
+    margin-top: -30px;
+    background-color: #F40CF4;
+    border-radius: 8px;
+    color:white;
+}
+.graph-container {
+    position: absolute;
+    left: 850px;
+    bottom: 68px;
+    border: 2px solid #436fea;
 
 }
