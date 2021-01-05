@@ -34,7 +34,7 @@
             </form>
             <p>Data from temperature indicators taken from esp32</p>
             <pre>
-                <option>Verse 5</option>
+                <div id="11"></div>
             </pre>
         </div>
 
@@ -42,6 +42,9 @@
 
           const verseChoose = document.querySelector('select');
           const poemDisplay = document.querySelector('pre');
+
+          let qw = "qwertgfdsa";
+          document.getElementById("11").innerHTML = qw;
 
           verseChoose.onchange = function() {
             const verse = verseChoose.value;

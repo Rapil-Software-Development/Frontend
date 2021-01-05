@@ -34,7 +34,7 @@
             </form>
             <p>Data from temperature indicators taken from esp32</p>
             <pre>
-                <option>Verse 5</option>
+                <div id="dev_test"></div>
             </pre>
         </div>
 
@@ -42,6 +42,7 @@
 
           const verseChoose = document.querySelector('select');
           const poemDisplay = document.querySelector('pre');
+
 
           verseChoose.onchange = function() {
             const verse = verseChoose.value;
@@ -64,8 +65,19 @@
             request.send();
           };
 
-          updateDisplay('Verse 1');
+          function parseTempFile(txt_content) {
+            txt_content = txt_content + 'mnbbggff';
+            document.getElementById("dev_test").innerHTML = txt_content;
+          }
+
+          updateDisplay('Verse 5');
+          document.getElementById("dev_test").innerHTML = poemDisplay.textContent;
           verseChoose.value = 'Verse 1';
+          let file5 = poemDisplay.textContent;
+
+          parseTempFile(file5);
+
+
 
         </script>
     </body>
